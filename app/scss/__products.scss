@@ -1,0 +1,128 @@
+.products {
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+
+		@include section-padding;
+
+		@include respond(tablet) {
+			display: grid;
+			grid-template-columns: 1fr 4fr;
+			gap: 2em;
+		}
+	}
+
+	.wpfButton {
+		width: 100% !important;
+	}
+
+	&__products {
+		.products {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 2em;
+			padding-top: 1em !important;
+
+			&::before {
+				display: none !important;
+			}
+
+			@include respond(tablet) {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include respond(desktop-small) {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			@include respond(desktop) {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+			}
+
+			li.product {
+				display: flex;
+				flex-direction: column;
+				width: 100% !important;
+				margin: 0 !important;
+				border: 2px solid $light-gray;
+				border-radius: 10px;
+				height: 480px;
+				overflow: hidden;
+				// max-width: 350px;
+				transition: box-shadow 0.3s, transform 0.3s;
+
+				&:hover {
+					box-shadow: -1px 25px 28px -19px rgba($color: $black, $alpha: 0.6);
+					transform: scale(1.05);
+				}
+
+				.woocommerce-LoopProduct-link {
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-end;
+					position: relative;
+					height: 100%;
+					padding: 1em;
+					text-align: center;
+
+					img {
+						margin: 0 !important;
+						position: absolute;
+						width: 100%;
+						height: 65%;
+						left: 0;
+						top: 0;
+						object-fit: cover;
+					}
+
+					h2 {
+						padding: 0 !important;
+						font-size: 1.7rem !important;
+						color: $black;
+						margin-bottom: 1em !important;
+					}
+
+					span {
+						margin: 0 !important;
+						color: #dc143c;
+						font-weight: 700;
+						font-size: 2rem;
+					}
+				}
+
+				.add_to_cart_button,
+				.product_type_simple,
+				.product_type_variable {
+					margin: 0 !important;
+					margin-bottom: 2em !important;
+					text-align: center;
+					text-transform: uppercase;
+					align-self: center;
+					padding: 0.5em !important;
+					color: #fff;
+					font-weight: 700;
+					font-size: 1.33rem !important;
+					letter-spacing: 1px;
+					background: none;
+					border: none;
+					border-radius: 0 !important;
+					background-color: #dc143c;
+					border: 2px solid transparent;
+					transition: border 0.2s, background-color 0.2s, color 0.2s;
+
+					&:hover {
+						background-color: #fff;
+						border: 2px solid #dc143c;
+						color: #dc143c;
+					}
+				}
+			}
+		}
+	}
+}

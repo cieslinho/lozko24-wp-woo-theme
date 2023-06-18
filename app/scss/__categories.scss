@@ -1,0 +1,111 @@
+.categories {
+	@include section-padding;
+
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include respond(tablet) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	&__box {
+		position: relative;
+		height: 380px;
+		width: 100%;
+		overflow: hidden;
+
+		&::after {
+			display: block;
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: rgba($color: $pure-black, $alpha: 0.5);
+			left: 0;
+			top: 0;
+			transition: background-color 0.2s ease-in-out;
+
+			z-index: 5;
+		}
+
+		&:hover {
+			.categories__img {
+				transform: scale(1.05);
+			}
+
+			.categories__bottom {
+				transform: translate(-50%, 0);
+			}
+
+			&::after {
+				background-color: rgba($color: $pure-black, $alpha: 0.15);
+			}
+		}
+	}
+
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.2s ease-in-out;
+		display: block;
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 100%);
+		background-color: rgba($color: $red, $alpha: 0.55);
+		text-align: center;
+		gap: 0.3em;
+		padding: 2em 2em;
+		width: 100%;
+		height: 100%;
+		z-index: 20;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&__title {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 3rem;
+		text-transform: uppercase;
+		color: $white;
+		letter-spacing: 2px;
+		z-index: 50;
+		text-shadow: 0px 8px 21px rgba($color: $pure-black, $alpha: 1);
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3em;
+
+		@include respond(tablet) {
+			flex-direction: row;
+		}
+
+		&-item {
+			background-color: $white;
+			padding: 0.5em;
+			text-transform: uppercase;
+			font-size: 1.3rem;
+			color: $red;
+			font-weight: 700;
+			letter-spacing: 1px;
+			text-shadow: 0px 8px 21px rgba($color: $pure-black, $alpha: 1);
+		}
+	}
+}

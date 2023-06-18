@@ -1,0 +1,29 @@
+.partners {
+	@include section-padding;
+
+	&__slider {
+		border-block: 1px solid $red;
+	}
+}
+
+.slider-item-show2-sm {
+	--swiffy-slider-item-count: 1;
+
+	@include respond(mobile) {
+		--swiffy-slider-item-count: 2;
+	}
+
+	@include respond(tablet) {
+		--swiffy-slider-item-count: 3;
+	}
+
+	@include respond(desktop-small) {
+		--swiffy-slider-item-count: 4;
+	}
+}
+
+.slider-nav-dark .slider-nav {
+	&::after {
+		background-color: $red;
+	}
+}

@@ -1,0 +1,69 @@
+.features {
+	@include section-padding;
+
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 3em;
+
+		@include respond(tablet) {
+			flex-direction: row;
+			gap: 2em;
+		}
+	}
+
+	&__box {
+		position: relative;
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 300px;
+		max-width: 290px;
+		border: 2px solid $light-gray;
+		border-radius: 10px;
+		text-align: center;
+
+		transition: box-shadow 0.3s, transform 0.3s;
+
+		&:hover {
+			box-shadow: -1px 25px 28px -19px rgba($color: $black, $alpha: 0.6);
+			transform: scale(1.05);
+		}
+	}
+
+	&__top {
+		position: absolute;
+		top: -25px;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 0.5em;
+		text-align: center;
+		background-color: $red;
+
+		i {
+			font-size: 3rem;
+			color: $white;
+		}
+	}
+
+	&__texts {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+
+		&-title {
+			text-transform: uppercase;
+			font-size: 1.7rem;
+			color: $black;
+			letter-spacing: 1px;
+		}
+
+		&-description {
+			color: $black;
+		}
+	}
+}

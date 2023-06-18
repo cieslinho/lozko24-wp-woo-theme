@@ -31,3 +31,22 @@
 		}
 	}
 }
+
+@mixin container {
+	padding: 1em;
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+
+	@include respond(tablet) {
+		padding: 1em 2em;
+	}
+}
+
+@mixin section-padding {
+	padding-block: 2em;
+
+	// @include respond(tablet) {
+	// 	padding-block: em;
+	// }
+}

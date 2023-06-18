@@ -1,0 +1,15 @@
+select.orderby {
+	padding: 0.5em;
+	cursor: pointer;
+	border-radius: 0;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	outline: none;
+
+	&:hover,
+	&:focus-visible {
+		border-radius: 0;
+		border-color: $red;
+	}
+}

@@ -1,0 +1,61 @@
+.wpfMainWrapper {
+	padding: 1em;
+	border: 2px solid $red;
+
+	.wpfFilterTitle {
+		color: $black !important;
+	}
+
+	.wpfFilterTaxNameWrapper {
+		color: $black !important;
+	}
+
+	// span.wpfCheckbox {
+	// 	label {
+	// 		&::before {
+	// 		}
+	// 	}
+	// }
+
+	.wpfFilterWrapper[data-radio='1'] .wpfCheckbox label:before {
+		border-radius: 0 !important;
+	}
+
+	.wpfFilterContent {
+		.ui-slider.ui-widget-content:not(.iris-slider-offset) {
+			border: 1px solid $light-gray !important;
+			background-color: $red !important;
+		}
+
+		.ui-slider.ui-widget-content .ui-slider-handle {
+			border: 1px solid $red !important;
+			background-color: $red !important;
+		}
+	}
+
+	.wpfFilterButton.wpfButton,
+	.wpfClearButton.wpfButton {
+		margin: 0 !important;
+		margin-bottom: 2em !important;
+		text-align: center;
+		text-transform: uppercase;
+		align-self: center;
+		padding: 0.5em !important;
+		color: #fff;
+		font-weight: 700;
+		font-size: 1.6rem !important;
+		letter-spacing: 1px;
+		background: none;
+		border: none;
+		border-radius: 0 !important;
+		background-color: #dc143c;
+		border: 2px solid transparent;
+		transition: border 0.2s, background-color 0.2s, color 0.2s;
+
+		&:hover {
+			background-color: #fff;
+			border: 2px solid #dc143c;
+			color: #dc143c;
+		}
+	}
+}

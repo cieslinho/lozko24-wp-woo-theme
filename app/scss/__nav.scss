@@ -1,14 +1,17 @@
 .nav {
 	position: fixed;
-	top: 58px;
+	top: 42px;
 	left: 0;
 	padding: 1em;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	z-index: 999999;
+	z-index: 1000;
 	background-color: $white;
+	// max-width: 1800px;
+	// right: 0;
+	// margin: 0 auto;
 	// border-bottom: 2px solid $red;
 
 	@include respond(tablet) {
@@ -38,13 +41,13 @@
 		position: fixed;
 		display: flex;
 		align-items: center;
-		padding: 1em;
+		padding: 0.5em 1em;
 		background-color: $pure-black;
 		width: 100%;
 		z-index: 99999;
 
 		@include respond(tablet) {
-			padding: 1em 2em;
+			padding: 0.5em 2em;
 		}
 
 		&-links {
@@ -92,7 +95,7 @@
 
 	ul.menu {
 		position: fixed;
-		top: 130px;
+		top: 113px;
 		right: 0;
 		height: 100vh;
 		width: 100vw;
@@ -195,7 +198,7 @@
 		}
 	}
 
-	li.menu-item-21 {
+	li.menu-item-4355 {
 		position: relative;
 
 		.nav__dropdown {
