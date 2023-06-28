@@ -1,0 +1,76 @@
+#order_review_heading {
+	margin-block: 1em;
+}
+
+#customer_details {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+
+	h3 {
+		color: $black;
+	}
+
+	&::before {
+		display: none;
+	}
+
+	@include respond(tablet) {
+		flex-direction: row;
+	}
+	.woocommerce-billing-fields__field-wrapper,
+	.woocommerce-shipping-fields__field-wrapper {
+		display: flex;
+		flex-direction: column;
+		color: $black;
+
+		p {
+			width: 100%;
+		}
+
+		input {
+			transition: all 0.2s;
+			border: 1px solid $light-gray;
+			padding: 0.6em 1em;
+
+			&:hover,
+			&:focus {
+				border: 1px solid $black;
+			}
+		}
+
+		.select2-container--default .select2-selection--single {
+			// border: 1px solid $black;
+			border-radius: 0;
+			// padding: 0.6em 1em;
+		}
+	}
+}
+
+.woocommerce-additional-fields__field-wrapper {
+	textarea {
+		transition: all 0.2s;
+		border: 1px solid $light-gray;
+		padding: 0.6em 1em;
+
+		&:hover,
+		&:focus {
+			border: 1px solid $black;
+		}
+	}
+}
+
+.form-row.place-order {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	a {
+		border-bottom: 1px solid $red;
+		color: $black;
+	}
+}
+
+#payment {
+	background-color: $white !important;
+}

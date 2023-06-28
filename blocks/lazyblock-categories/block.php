@@ -11,7 +11,7 @@
                     </ul>
                 </div>
             </a>
-            <a href="lozka" class="categories__box">
+            <a href="materace" class="categories__box">
                 <img class="categories__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/header1.jpg" alt="">
                 <h3 class="categories__title">materace</h3>
                 <div class="categories__bottom">
@@ -22,7 +22,7 @@
                     </ul>
                 </div>
             </a>
-            <a href="lozka" class="categories__box">
+            <a href="dodatki" class="categories__box">
                 <img class="categories__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/header1.jpg" alt="">
                 <h3 class="categories__title">dodatki</h3>
                 <div class="categories__bottom">

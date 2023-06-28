@@ -72,6 +72,9 @@ function lozko24_config(){
 
     
 
+    
+
+
 /** * Completely Remove jQuery From WordPress */
 // function my_init() {
 //   if (!is_admin()) {

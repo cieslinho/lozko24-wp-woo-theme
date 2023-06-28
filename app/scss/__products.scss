@@ -11,6 +11,10 @@
 			grid-template-columns: 1fr 4fr;
 			gap: 2em;
 		}
+
+		&-mattress {
+			grid-template-columns: repeat(1, 4fr);
+		}
 	}
 
 	.wpfButton {

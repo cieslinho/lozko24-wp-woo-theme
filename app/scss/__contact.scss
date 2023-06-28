@@ -1,0 +1,98 @@
+.contact {
+	@include section-padding;
+
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+
+		@include respond(tablet) {
+			display: grid;
+			grid-template-columns: 2fr 3fr;
+			align-items: initial;
+		}
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		width: 100%;
+
+		&-map {
+			iframe {
+				width: 100%;
+			}
+		}
+
+		&-form {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			box-shadow: -1px 25px 28px -19px rgba(44, 44, 44, 0.6);
+			background-color: $red;
+			padding: 1.5em;
+		}
+
+		&-texts {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+		}
+
+		&-title {
+			color: $black;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		&-text {
+			color: $black;
+		}
+
+		&-link {
+			align-self: flex-start;
+			border-bottom: 1px solid $light-gray;
+
+			&:hover {
+				border-bottom: 1px solid $red;
+			}
+		}
+	}
+
+	&__input,
+	&__textarea {
+		outline: none;
+		border: none;
+		background: none;
+		background-color: rgba($color: $black, $alpha: 0.3);
+		padding: 0.8em 1em;
+		color: $white;
+		font-family: 'Montserrat', sans-serif;
+
+		&::placeholder {
+			color: $white;
+		}
+	}
+
+	&__btn {
+		transition: border 0.2s, background-color 0.2s, color 0.2s;
+		border: none;
+		border: 2px solid transparent;
+		background: none;
+		background-color: $white;
+		padding: 0.8em;
+		color: $red;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+
+		&:hover {
+			border: 2px solid $white;
+			background-color: $red;
+			color: $white;
+		}
+	}
+}

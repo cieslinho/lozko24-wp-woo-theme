@@ -1,0 +1,20 @@
+section.related.products {
+	display: flex !important;
+	flex-direction: column !important;
+
+	h2 {
+		margin: 0 auto;
+		margin-bottom: 2em;
+		border-bottom: 2px solid $red;
+		width: fit-content;
+		color: $black;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	li.product {
+		h2 {
+			border-bottom: 0;
+		}
+	}
+}

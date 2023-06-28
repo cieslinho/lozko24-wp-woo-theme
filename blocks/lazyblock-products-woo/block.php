@@ -3,19 +3,14 @@
         <div class="products__boxes">
 
 <div class="prodcuts__filter">
-<?php 
 
-echo do_shortcode('[wpf-filters id=2]');
-
-?>
+<?php echo $attributes['filter-shortcode']; ?>
 </div>
 
 <div class="products__products">
-<?php 
 
-echo do_shortcode('[product_category category="lozka" limit="20" columns="4" paginate=true]');
 
-?>
+<?php echo $attributes['category-shortcode']; ?>
 </div>
         
         </div>

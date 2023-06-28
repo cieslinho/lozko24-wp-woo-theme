@@ -1,0 +1,29 @@
+.woocommerce-tabs.wc-tabs-wrapper {
+	ul.tabs.wc-tabs {
+		&::before {
+			border-bottom: 2px solid $red !important;
+		}
+
+		li.description_tab {
+			// background-color: $red;
+		}
+
+		li.active {
+			background-color: $white !important;
+
+			a {
+				color: $black !important;
+			}
+		}
+
+		li {
+			border-radius: 0 !important;
+			background-color: $red !important;
+			font-size: 1.5rem !important;
+			text-transform: uppercase !important;
+			a {
+				color: $white !important;
+			}
+		}
+	}
+}
