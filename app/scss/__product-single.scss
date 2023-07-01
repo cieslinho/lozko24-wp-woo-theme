@@ -154,3 +154,115 @@
 		}
 	}
 }
+
+.woo-product-gallery-slider.woocommerce-product-gallery.wpgs--with-images.images {
+	@include respond(desktop) {
+		width: 65% !important;
+	}
+
+	.wpgs-nav.slick-initialized.slick-slider {
+		i.thumb {
+			display: none !important;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 10000;
+			transition: background-color 0.3s;
+			cursor: pointer;
+			background-color: rgba($color: $black, $alpha: 0.7);
+			padding: 0.1em;
+			color: $red;
+			font-size: 3rem;
+
+			@include respond(tablet) {
+				display: block !important;
+			}
+
+			&-left {
+				left: 5px;
+			}
+
+			&-right {
+				right: 5px;
+			}
+
+			&:hover {
+				background-color: rgba($color: $red, $alpha: 0.9);
+			}
+		}
+	}
+
+	i.slick-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		transition: background-color 0.3s;
+		cursor: pointer;
+		background-color: rgba($color: $black, $alpha: 0.7);
+		padding: 0.1em;
+		font-size: 3rem;
+
+		&:before {
+			transition: color 0.3s;
+			color: $red;
+		}
+
+		&-previous {
+			left: 0;
+		}
+		&-next {
+			right: 0;
+		}
+
+		&:hover {
+			background-color: rgba($color: $red, $alpha: 0.9);
+
+			&:before {
+				color: $white;
+			}
+		}
+	}
+
+	.slick-dots {
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+		margin-block: 0.5em;
+
+		li {
+			width: 10px;
+			height: 10px;
+		}
+
+		li button {
+			width: 10px;
+			height: 10px;
+
+			&::before {
+				background-color: $red;
+				width: 8px;
+				height: 8px;
+			}
+		}
+
+		@include respond(tablet) {
+			display: none !important;
+		}
+	}
+
+	.wpgs-nav .slick-current {
+		border: 1px solid #d1d1d1 !important;
+	}
+}
+
+.attachment-full,
+.wpgs-thumb-main-image {
+	width: 100% !important;
+	height: 100px !important;
+	object-fit: cover;
+
+	@include respond(desktop) {
+		height: 150px !important;
+	}
+}

@@ -1,0 +1,56 @@
+.woocommerce {
+	h2 {
+		color: $black;
+	}
+}
+
+.woocommerce-form.woocommerce-form-login.login {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	margin-inline: auto;
+	border: 2px solid $light-gray;
+	border-radius: 0;
+	max-width: 1200px;
+
+	p {
+		display: flex;
+		flex-direction: column;
+
+		label {
+			color: $black;
+		}
+
+		input {
+			border: none;
+			background: none;
+			background-color: $light-gray;
+			padding: 1em;
+		}
+	}
+
+	.form-row {
+		&:nth-child(3) {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		.woocommerce-button.button.woocommerce-form-login__submit {
+			order: -1;
+		}
+	}
+
+	.woocommerce-LostPassword.lost_password {
+		align-items: flex-start;
+		a {
+			border-bottom: 1px solid $light-gray;
+			color: $black;
+
+			&:hover {
+				border-bottom: 1px solid $red;
+			}
+		}
+	}
+}

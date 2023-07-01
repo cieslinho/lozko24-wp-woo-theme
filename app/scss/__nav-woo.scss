@@ -1,0 +1,53 @@
+.woocommerce-MyAccount-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+
+	p {
+		color: $black;
+
+		a {
+			border-bottom: 1px solid $light-gray;
+			color: $black;
+			font-weight: 700;
+
+			&:hover {
+				border-bottom: 1px solid $red;
+			}
+		}
+	}
+
+	@include respond(tablet) {
+		float: none !important;
+		width: 100% !important;
+	}
+}
+
+.woocommerce-MyAccount-navigation {
+	margin-bottom: 2em;
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+
+		@include respond(tablet) {
+			flex-direction: row;
+		}
+
+		li {
+			a {
+				color: $black;
+				font-weight: 700;
+
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+	}
+
+	@include respond(tablet) {
+		float: none !important;
+		width: 100% !important;
+	}
+}

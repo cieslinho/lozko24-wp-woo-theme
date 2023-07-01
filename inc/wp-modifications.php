@@ -25,4 +25,4 @@ function atg_menu_classes($classes, $item, $args) {
       }
       add_filter('nav_menu_css_class', 'atg_menu_classes2', 1, 3);
 
-      
+
