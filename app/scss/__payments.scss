@@ -1,0 +1,63 @@
+.payments {
+	@include section-padding;
+
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+
+		&-text {
+			font-size: 1.2rem;
+
+			@include respond(mobile) {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+		margin-left: 2em;
+		color: $black;
+		line-height: 150%;
+
+		&-item {
+			font-size: 1.2rem;
+
+			@include respond(mobile) {
+				font-size: 1.4rem;
+			}
+
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+
+	&__details {
+		margin-left: 1em;
+
+		font-size: 1.2rem;
+
+		@include respond(mobile) {
+			font-size: 1.4rem;
+		}
+
+		&-text {
+			font-weight: 700;
+		}
+	}
+}

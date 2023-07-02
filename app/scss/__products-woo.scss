@@ -87,7 +87,7 @@ main#main {
 				align-self: center;
 				transition: border 0.2s, background-color 0.2s, color 0.2s;
 				margin: 0 !important;
-				margin-bottom: 2em !important;
+				margin-bottom: 1em !important;
 				border: none;
 				border: 2px solid transparent;
 				border-radius: 0 !important;
@@ -109,4 +109,10 @@ main#main {
 			}
 		}
 	}
+}
+
+.added_to_cart.wc-forward {
+	margin-bottom: 1em;
+	color: $black;
+	text-align: center;
 }

@@ -54,3 +54,16 @@
 		}
 	}
 }
+
+.woocommerce-error {
+	li {
+		a {
+			border-bottom: 1px solid $light-gray;
+			color: $black;
+
+			&:hover {
+				border-bottom: 1px solid $red;
+			}
+		}
+	}
+}
