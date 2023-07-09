@@ -1,14 +1,14 @@
 .nav {
+	display: flex;
 	position: fixed;
 	top: 42px;
 	left: 0;
-	padding: 1em;
-	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	width: 100%;
+	align-items: center;
 	z-index: 1000;
 	background-color: $white;
+	padding: 1em;
+	width: 100%;
 	// max-width: 1800px;
 	// right: 0;
 	// margin: 0 auto;
@@ -36,15 +36,15 @@
 	}
 
 	&__top {
+		display: flex;
+		position: fixed;
 		top: 0;
 		left: 0;
-		position: fixed;
-		display: flex;
 		align-items: center;
-		padding: 0.5em 1em;
-		background-color: $pure-black;
-		width: 100%;
 		z-index: 99999;
+		background-color: $pure-black;
+		padding: 0.5em 1em;
+		width: 100%;
 
 		@include respond(tablet) {
 			padding: 0.5em 2em;
@@ -53,17 +53,17 @@
 		&-links {
 			display: flex;
 			align-items: center;
-			width: 100%;
 			gap: 0.5em;
+			width: 100%;
 		}
 
 		&-link {
-			padding: 0.4em 0.8em;
 			display: flex;
 			align-items: center;
 			gap: 0.3em;
-			font-size: 1rem;
+			padding: 0.4em 0.8em;
 			color: $white;
+			font-size: 1rem;
 
 			&:nth-child(1),
 			&:nth-child(2) {
@@ -78,8 +78,8 @@
 				margin-right: auto;
 
 				@include respond(mobile-max) {
-					margin-left: auto;
 					margin-right: 0;
+					margin-left: auto;
 				}
 			}
 
@@ -94,27 +94,27 @@
 	}
 
 	ul.menu {
+		display: flex;
 		position: fixed;
 		top: 113px;
 		right: 0;
-		height: 100vh;
-		width: 100vw;
-		display: flex;
+		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
-		background-color: $white;
-		flex-direction: column;
 		gap: 0.5em;
 		transform: translateX(-100%);
 		transition: transform 0.3s ease-in-out;
+		background-color: $white;
+		width: 100vw;
+		height: 100vh;
 
 		@include respond(desktop-small) {
-			top: 0;
-			width: initial;
-			height: initial;
 			position: initial;
+			top: 0;
 			flex-direction: row;
 			transform: translateX(0);
+			width: initial;
+			height: initial;
 		}
 
 		ul.sub-menu {
@@ -143,31 +143,16 @@
 		}
 
 		a {
-			position: relative;
 			display: block;
+			position: relative;
+			transition: color 0.3s;
 			padding: 0.8em 1.6em;
 			width: 100%;
-			text-transform: uppercase;
 			color: $black;
 			font-weight: 700;
-			letter-spacing: 1px;
 			font-size: 1.2rem;
-			transition: color 0.3s;
-
-			&::after {
-				position: absolute;
-				content: '';
-				left: 0;
-				bottom: 1px;
-				background-color: $red;
-				width: 0;
-				height: 2px;
-				transition: width 0.4s ease-in-out;
-
-				@include respond(desktop-small) {
-					transition: width 0.3s ease-in-out;
-				}
-			}
+			letter-spacing: 1px;
+			text-transform: uppercase;
 
 			&::first-letter {
 				font-size: 2rem;
@@ -186,8 +171,23 @@
 			}
 
 			@include respond(desktop-small) {
-				font-size: 1.3rem;
 				padding: 0.8em;
+				font-size: 1.3rem;
+
+				&::after {
+					position: absolute;
+					bottom: 1px;
+					left: 0;
+					transition: width 0.4s ease-in-out;
+					background-color: $red;
+					width: 0;
+					height: 2px;
+					content: '';
+
+					@include respond(desktop-small) {
+						transition: width 0.3s ease-in-out;
+					}
+				}
 			}
 		}
 	}
@@ -205,12 +205,12 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			background: none;
 			border: none;
-			font-size: 1.5rem;
-			font-weight: 700;
-			padding: 0.7em;
 			border: 2px solid $red;
+			background: none;
+			padding: 0.7em;
+			font-weight: 700;
+			font-size: 1.5rem;
 
 			&:hover {
 				color: $red;
@@ -240,8 +240,8 @@
 						color: $white;
 
 						&:hover {
-							padding-left: 1.3em;
 							background-color: rgba($color: $black, $alpha: 0.1);
+							padding-left: 1.3em;
 						}
 					}
 
@@ -254,12 +254,12 @@
 			}
 
 			@include respond(desktop-small) {
-				width: 180px;
 				position: absolute;
 				top: 40px;
 				margin-left: 0;
-				background-color: $red;
 				box-shadow: 0px 8px 21px -13px rgba($color: $pure-black, $alpha: 1);
+				background-color: $red;
+				width: 180px;
 			}
 		}
 
@@ -277,27 +277,27 @@
 	}
 
 	&__btn {
-		padding: 0.8em;
-		background: none;
-		border: none;
-		background-color: $black;
 		z-index: 999;
 		outline: none;
+		border: none;
+		background: none;
+		background-color: $black;
+		padding: 0.8em;
 
 		@include respond(desktop-small) {
 			display: none;
 		}
 
 		&-box {
+			position: relative;
 			width: 30px;
 			height: 14px;
-			position: relative;
 		}
 
 		&-text {
-			text-transform: uppercase;
 			vertical-align: middle;
 			font-weight: 700;
+			text-transform: uppercase;
 		}
 
 		&-span {
@@ -308,15 +308,15 @@
 		&-span,
 		&-span::after,
 		&-span::before {
-			position: absolute;
 			display: block;
-			content: '';
+			position: absolute;
+			right: 0;
+			transition: width 0.3s ease-in-out;
+			border-radius: 4px;
+			background-color: $light-gray;
 			width: 30px;
 			height: 2px;
-			right: 0;
-			background-color: $light-gray;
-			border-radius: 4px;
-			transition: width 0.3s ease-in-out;
+			content: '';
 		}
 
 		&-span {

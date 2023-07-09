@@ -36,12 +36,55 @@
 
 		li {
 			a {
+				display: block;
+				transition: color 0.3s;
+				padding: 0.8em;
 				color: $black;
 				font-weight: 700;
+				font-size: 1.3rem;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+
+				&::first-letter {
+					font-size: 2rem !important;
+
+					@include respond(desktop-small) {
+						font-size: 1.8rem;
+					}
+				}
 
 				&:hover {
 					color: $red;
 				}
+
+				@include respond(desktop-small) {
+					position: relative;
+
+					&::after {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						transition: width 0.4s ease-in-out;
+						background-color: $red;
+						width: 0;
+						height: 2px;
+						content: '';
+					}
+
+					&:hover {
+						&::after {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+
+		li.is-active {
+			background-color: $red;
+
+			a {
+				color: $white;
 			}
 		}
 	}

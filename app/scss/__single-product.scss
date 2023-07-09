@@ -1,0 +1,23 @@
+.woocommerce-Tabs-panel {
+	h2 {
+		margin-block: 1em;
+	}
+
+	p {
+		margin-block: 1em;
+		line-height: 150%;
+	}
+
+	.row {
+		.col-12 {
+			p {
+				margin-block: 1em;
+				line-height: 150%;
+			}
+		}
+	}
+}
+
+.sku_wrapper {
+	display: none;
+}

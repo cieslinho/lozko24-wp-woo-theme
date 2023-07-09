@@ -1,0 +1,28 @@
+.woocommerce-Input,
+.input-text {
+	transition: all 0.2s;
+	outline: none;
+	border: none;
+	border: 1px solid transparent;
+	background: none;
+	background-color: #ececec;
+	padding: 1em;
+
+	&:hover,
+	&:focus {
+		border: 1px solid #2c2c2c;
+	}
+}
+
+fieldset {
+	border: none;
+}
+
+p.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide {
+	span {
+		em {
+			display: block;
+			margin-block: 1em !important;
+		}
+	}
+}

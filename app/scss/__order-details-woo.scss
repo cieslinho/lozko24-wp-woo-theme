@@ -1,0 +1,86 @@
+h2.woocommerce-order-details__title {
+	margin-block: 1em;
+	color: $black;
+}
+
+mark {
+	background-color: $red;
+	padding: 0.3em;
+	color: $white;
+}
+
+.woocommerce-columns.woocommerce-columns--2.woocommerce-columns--addresses.col2-set.addresses,
+.u-columns.woocommerce-Addresses.col2-set.addresses {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	&::after,
+	&::before {
+		display: none;
+		content: none;
+	}
+
+	@include respond(tablet) {
+		flex-direction: row;
+	}
+}
+
+.woocommerce-column.woocommerce-column--1.woocommerce-column--billing-address.col-1,
+.woocommerce-column.woocommerce-column--2.woocommerce-column--shipping-address.col-2 {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	width: 100%;
+
+	address {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3em;
+		border-bottom: 4px solid $red;
+		// align-items: center;
+		border-radius: 0;
+		padding: 1em;
+		height: 100%;
+	}
+}
+
+.u-columns.woocommerce-Addresses.col2-set.addresses {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-block: 1em;
+	width: 100%;
+
+	@include respond(tablet) {
+		flex-direction: row;
+	}
+
+	address {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3em;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-bottom: 4px solid $red;
+		// align-items: center;
+		border-radius: 0;
+		padding: 1em;
+		height: 100%;
+	}
+}
+
+.u-column1.col-1.woocommerce-Address,
+.u-column2.col-2.woocommerce-Address {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.woocommerce-Address-title.title {
+	color: $black;
+
+	a {
+		border-bottom: 1px solid $red;
+		color: $black;
+	}
+}
