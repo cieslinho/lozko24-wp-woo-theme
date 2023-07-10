@@ -31,6 +31,7 @@
 			align-items: center;
 			gap: 0.5em;
 			color: $red;
+			font-weight: 700;
 			font-size: 1.7rem;
 		}
 
@@ -88,6 +89,17 @@
 		.variable-item.color-variable-item.selected {
 			box-shadow: var(--wvs-selected-item-box-shadow, 0 0 0 2px $red);
 		}
+	}
+
+	span.price {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 0.5em;
+		margin-block: 0.5em;
+		color: $red !important;
+		font-weight: 700;
+		font-size: 1.7rem;
 	}
 
 	.single_variation_wrap {

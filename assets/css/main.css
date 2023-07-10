@@ -1001,7 +1001,7 @@ body {
   margin: 0 !important;
   color: #dc143c;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .products__products .products li.product .add_to_cart_button,
 .products__products .products li.product .product_type_simple,
@@ -1064,6 +1064,7 @@ body {
   align-items: center;
   gap: 0.5em;
   color: #dc143c;
+  font-weight: 700;
   font-size: 1.7rem;
 }
 .product .summary.entry-summary form.variations_form.cart.wvs-loaded div[data-product_id] {
@@ -1107,6 +1108,16 @@ body {
 .product .summary.entry-summary .variable-item.button-variable-item.selected,
 .product .summary.entry-summary .variable-item.color-variable-item.selected {
   box-shadow: var(--wvs-selected-item-box-shadow, 0 0 0 2px #dc143c);
+}
+.product span.price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5em;
+  margin-block: 0.5em;
+  color: #dc143c !important;
+  font-weight: 700;
+  font-size: 1.7rem;
 }
 .product .single_variation_wrap {
   width: 100%;
@@ -2223,6 +2234,15 @@ p.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide span em
 
 .sku_wrapper {
   display: none;
+}
+
+.woocommerce-product-attributes-item {
+  display: none;
+}
+
+.woocommerce-product-attributes-item--attribute_pa_tkanina-kolor,
+.woocommerce-product-attributes-item--attribute_pa_rozmiar {
+  display: table-row;
 }
 
 #primary {

@@ -21,3 +21,12 @@
 .sku_wrapper {
 	display: none;
 }
+
+.woocommerce-product-attributes-item {
+	display: none;
+}
+
+.woocommerce-product-attributes-item--attribute_pa_tkanina-kolor,
+.woocommerce-product-attributes-item--attribute_pa_rozmiar {
+	display: table-row;
+}
